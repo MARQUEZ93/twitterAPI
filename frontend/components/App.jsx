@@ -1,6 +1,9 @@
 import React from 'react';
 //components
 import Header from './Header';
+import getTweets from '../util/apiCalls';
+import getFlicks from '../util/apiCalls';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -8,6 +11,7 @@ class App extends React.Component {
     this.state = {};
   }
   componentDidMount() {
+    this.setState({});
   }
   render() {
     return (
