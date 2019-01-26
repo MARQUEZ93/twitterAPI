@@ -8,6 +8,7 @@
     "babel-preset-react": "^6.24.1",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
+    "react-bootstrap-table-next": "^2.1.0",
     "react-dom": "^16.5.2",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
@@ -23,7 +24,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
     "webpack": "webpack --watch --mode=development",
-    "build": "webpack -p" 
+    "build": "webpack -p"
   },
   "keywords": [],
   "author": "",

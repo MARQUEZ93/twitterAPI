@@ -57,6 +57,7 @@ gem 'listen', '>= 3.0.5', '< 3.2'
 end
 #make api calls
 gem 'rest-client'
+gem 'jquery-rails'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
