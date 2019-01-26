@@ -11,7 +11,7 @@
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "job applicant project for Jibe",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -19,7 +19,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",

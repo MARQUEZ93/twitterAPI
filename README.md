@@ -1,24 +1,21 @@
-# README
+# [twitterAPI](http://www.thecoinface.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+twitterAPI
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+* Fetch realtime prices of crypto assets.
 
-* System dependencies
+## Getting Started
 
-* Configuration
+## Code Snippet
+* This function provides the user cryptocurrency in each of their wallets, and is run upon user sign up.
 
-* Database creation
+<p align="center"><img src="https://i.imgur.com/9uUBlSM.png" width="800px" /></p>
 
-* Database initialization
+## Built With
 
-* How to run the test suite
+* [React](https://reactjs.org/docs/getting-started.html) - The frontend framework used
+* [Rails](https://guides.rubyonrails.org/) - The backend framework used
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## My Thoughts
