@@ -1,5 +1,5 @@
 class Api::TweetsController < ApplicationController
   def show
-    Flickr.getFlicks 
+    render json: TWTR.getTweets()
   end
 end
