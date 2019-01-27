@@ -15,7 +15,7 @@ const Header = () => {
             <div className="navbar-nav-scroll">
               <ul className="nav">
                 <li className="nav-item">
-                  {logo}
+                  <a href="https://facebook.github.io/create-react-app/docs/getting-started">{logo}</a>
                 </li>
                 <li className="nav-item">
                   <div className="nav-link">

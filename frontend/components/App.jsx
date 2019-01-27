@@ -1,17 +1,18 @@
 import React from 'react';
 //components
 import Header from './Header';
-import getTweets from '../util/apiCalls';
-import getFlicks from '../util/apiCalls';
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {tweets: null};
   }
   componentDidMount() {
-    this.setState({});
+    console.log($.ajax({
+      url:'/api/tweets',
+      method: 'GET'
+    }));
   }
   render() {
     return (

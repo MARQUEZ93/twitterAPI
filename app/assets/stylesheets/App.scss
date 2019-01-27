@@ -5,6 +5,9 @@
 .nav-link {
   color: white;
 }
+.nav-item, .nav-link{
+  cursor: pointer;
+}
 
 .nav-item .active {
   color: #61dafb;

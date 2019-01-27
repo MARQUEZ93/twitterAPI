@@ -1,6 +1,5 @@
 class Api::TweetsController < ApplicationController
   def show
-    @tweets = Twitter.getTweets
-    render json: @tweets
+    Flickr.getFlicks 
   end
 end
