@@ -1,5 +1,6 @@
 class Api::TweetsController < ApplicationController
   def show
-    render json: TWTR.getTweets()
+    @tweets = TWTR.getTweets
+    render json: @tweets
   end
 end

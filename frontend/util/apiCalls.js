@@ -1,10 +1,6 @@
 import React from 'react';
 
-export const getTweets = () => {
-  console.log("fuck");
-};
-
-export const getTweet = () => (
+export const getTweets = () => (
   $.ajax({
     url:'/api/tweets',
     method: 'GET'

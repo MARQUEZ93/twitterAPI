@@ -6,15 +6,16 @@ import Header from './Header';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {tweets: null};
+    this.state = {tweets: []};
   }
   componentDidMount() {
-    console.log($.ajax({
+    ($.ajax({
       url:'/api/tweets',
       method: 'GET'
-    }));
+    }).then(res=>this.setState({tweets:res})));
   }
   render() {
+    console.log(this.state);
     return (
       <div className="appComponent">
         <Header />
