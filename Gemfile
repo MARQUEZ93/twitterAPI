@@ -57,6 +57,7 @@ end
 #make api calls
 gem 'jquery-rails'
 gem 'twitter'
+gem 'flickraw'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
