@@ -22,7 +22,10 @@ class FLCKR < ApplicationRecord
     photos.map do |photo|
       image = flickr.photos.getInfo({photo_id: photo.id})
       comments = flickr.photos.comments.getList({photo_id: photo.id})
-      frontend_array.push ({type: "Flickr", text: photo.title, comments: comments, image: image})
+      if (comments.inspect != "FlickRaw::ResponseList")
+        comments = [] #send array of length zero to frontend
+      end
+      frontend_array.push ({text: photo.title, comments: comments, name: image.owner.username })
     end
     frontend_array
   end

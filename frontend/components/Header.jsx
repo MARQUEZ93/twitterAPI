@@ -19,7 +19,10 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <div className="nav-link">
-                    twitterAPI
+                    twitterFlickrAPI
+                  </div>
+                  <div className="nav-link">
+                    <a href="https://github.com/MARQUEZ93/twitterFlickrAPI"> by Alejandro E. Marquez</a>
                   </div>
                 </li>
               </ul>

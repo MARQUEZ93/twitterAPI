@@ -9,10 +9,14 @@
   cursor: pointer;
 }
 
+.nav-item{
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-item .active {
   color: #61dafb;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 50%;
@@ -28,7 +32,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin-bottom: 15px;
 }
 
 
@@ -39,4 +42,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.loadbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-top: 15%;
 }

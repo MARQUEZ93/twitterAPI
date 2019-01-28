@@ -6,12 +6,13 @@ class TWTR < ApplicationRecord
       config.consumer_secret = ENV['TWTR_SECRET']
     end
 
-    array = client.search("%23dctech", result_type: "recent").take(100000).select do |tweet|
+    array = client.search("#dctech", result_type: "recent").take(100000).select do |tweet|
       tweet.media?
     end
     #i am only given tweets for around the last 10 days
     array = array.map do |tweet|
-      {type: "Twitter", text: tweet.full_text, count: tweet.retweet_count, user: tweet.user.name}
+      src = tweet.full_text.split(' ').last
+      {text: tweet.full_text, count: tweet.retweet_count, name: tweet.user.name}
     end
 
   end
