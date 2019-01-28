@@ -27,6 +27,10 @@
     "webpack": "webpack --watch --mode=development",
     "build": "webpack -p"
   },
+  "engines": {
+    "node": "v8.9.4",
+    "npm": "6.2.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

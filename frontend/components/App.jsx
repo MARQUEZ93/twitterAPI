@@ -102,7 +102,7 @@ sortRows(arr) {
     return (
       <div className="appComponent">
         <Header />
-        <BootstrapTable keyField="id" data={this.renderTable()} columns={columns} bootstrap4={true} />
+        <BootstrapTable keyField="index" data={this.renderTable()} columns={columns} bootstrap4={true} />
       </div>
     );
   }
