@@ -5,18 +5,18 @@ Use the Twitter and Flickr APIs to return all photos with a #dctech hashtag with
 ## Getting Started
 
 * To run locally, clone the repo.
-* ``` npm install. ```
-* ``` npm run webpack. ```
+* ``` npm install ```
+* ``` npm run webpack ```
 * ``` bundle install ```
-* ``` rails s. ```
+* ``` rails s ```
 * The project will available on http://localhost:3000/
 
 ## Code Snippet
 * This class makes an API call to the Flickr server.
 * The ENV variables are set for authorization.
 * The [FlickRaw](https://rubygems.org/gems/flickraw/versions/0.9.9) gem is implemented.
-* Search for flicks within the last month
-* Parse response data in format desired by the frontend
+* Search for flicks within the last month.
+* Parse response data in format desired by the frontend.
 
 <p align="center"><img src="https://i.imgur.com/VapudwH.png" width="800px" /></p>
 
