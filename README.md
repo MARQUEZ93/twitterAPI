@@ -28,6 +28,7 @@ Use the Twitter and Flickr APIs to return all photos with a #dctech hashtag with
 * [FlickRaw](https://rubygems.org/gems/flickraw/versions/0.9.9) - Ruby gem to make API calls to Flickr API
 * [Heroku](https://twitterflickrapi.herokuapp.com/) - Host that builds the project for production
 * [Postman](https://www.getpostman.com/) - Allowed me to test API calls before writing the code in Rails.
+* [Bootstrap](https://www.npmjs.com/package/react-bootstrap-table-next) - Styled the data in a table. 
 
 ## My Thoughts
 1) This was my first experience with OAuth. Rather than write my own OAuth requests, I used Ruby gems recommended by both respective APIs.
