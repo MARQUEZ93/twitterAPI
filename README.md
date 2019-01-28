@@ -19,3 +19,10 @@ twitterAPI
 * [Rails](https://guides.rubyonrails.org/) - The backend framework used
 
 ## My Thoughts
+1) OAUTH 1.0 2.0 my own 1.0..my first experience w/ oauth, so why re-invent the wheel. I used postman
+2) env variables (i protected on production + dev)
+3) frontend/react/heroku
+4) cite built with gems; postman
+5) why reinvent the wheel?
+6) time was wasted w/ flickr github documentation + twitter docs (broken links + only allowed oauth + its api service would break + settled on twitter gem)
+7) my commit history may have api key (i never pushed it though)

@@ -11,7 +11,7 @@ class TWTR < ApplicationRecord
     end
     #i am only given tweets for around the last 10 days
     array = array.map do |tweet|
-      {text: tweet.full_text, count: tweet.retweet_count, user: tweet.user.name}
+      {type: "Twitter", text: tweet.full_text, count: tweet.retweet_count, user: tweet.user.name}
     end
 
   end
