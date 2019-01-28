@@ -27,3 +27,4 @@ twitterAPI
 6) time was wasted w/ flickr github documentation + twitter docs (broken links + only allowed oauth + its api service would break + settled on twitter gem)
 7) my commit history may have api key (i never pushed it though)
 https://twitter.com/TechnicallyDC/status/1088562537938014208
+8) api keys previous commits 
