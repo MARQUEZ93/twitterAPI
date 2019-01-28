@@ -58,6 +58,7 @@ end
 gem 'jquery-rails'
 gem 'twitter'
 gem 'flickraw'
+gem 'sqlite3'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
