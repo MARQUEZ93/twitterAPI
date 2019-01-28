@@ -59,7 +59,7 @@ class App extends React.Component {
         sortedArr.push(rightArr.shift());
       return sortedArr;
 }
-
+//sort rows on amount of retweets/comments
 sortRows(arr) {
   if (arr.length < 2) {
     return arr;
@@ -86,6 +86,8 @@ sortRows(arr) {
     let rows = tweets.concat(flicks);
     rows = this.sortRows(rows);
     rows.forEach(function(row, index){
+      //data is sorted on index 0, so only render the data we want in index 1
+      //[ [retweets, {tweet object}], [comments, {flickr object}] ] array of arrays 
       row[1].index = index+1;
       renderArray.push(row[1]);
     });
