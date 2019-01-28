@@ -1,10 +1,14 @@
-class Flickr < ApplicationRecord
+require 'flickraw'
+
+FlickRaw.api_key=ENV['FLICKRAW_API_KEY']
+FlickRaw.shared_secret=ENV['FLICKRAW_SHARED_SECRET']
+class FLCKR < ApplicationRecord
 
   def self.getFlicks
     now = Date.today.to_time.to_i.to_s
     last_month = Date.today.last_month.to_time.to_i.to_s
 
-    flickr = FlickRaw::Flickr.new ENV['FLICKRAW_API_KEY'] ENV['FLICKRAW_SHARED_SECRET']
+    flickr = FlickRaw::Flickr.new 
 
     args = {}
 
@@ -13,7 +17,7 @@ class Flickr < ApplicationRecord
     args[:max_upload_date] = now
     args[:text] = "#dctech"
 
-    puts(flickr.photos.search args)
+    flickr.photos.search args
   end
 
 end
