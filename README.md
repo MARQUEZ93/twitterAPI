@@ -43,5 +43,5 @@ Live: https://twitterflickrapi.herokuapp.com/
 * I used env variables in both development and production. This protects the API keys as I pushed the code to Github.
 * I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work as well.
 * I received access to my own sandbox api environment. I am using a free version that only has 250 calls a month.
-* An enterprise account would be mandatory for an enterprise project. I'll be honest and share that I created a fake twitter account to give myself 250 requests. I used all 250 requests.
+* An enterprise account would be mandatory for an enterprise project. I'm not embarrassed to share that I created a fake twitter account to give myself 250 requests. I used all 250 requests.
 * One big lesson I learned was to cross reference Github documentation with documentation on the respective dependency site.
