@@ -58,6 +58,7 @@ gem 'jquery-rails'
 gem 'twitter'
 gem 'flickraw'
 gem 'pg'
+gem 'rest-client'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

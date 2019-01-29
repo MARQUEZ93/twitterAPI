@@ -87,13 +87,16 @@ sortRows(arr) {
     rows = this.sortRows(rows);
     rows.forEach(function(row, index){
       //data is sorted on index 0, so only render the data we want in index 1
-      //[ [retweets, {tweet object}], [comments, {flickr object}] ] array of arrays 
+      //[ [retweets, {tweet object}], [comments, {flickr object}] ] array of arrays
       row[1].index = index+1;
       renderArray.push(row[1]);
     });
     return renderArray;
   }
   render() {
+    if (this.state.tweets){
+      console.log(this.state);
+    }
     if (!this.state.tweets || !this.state.flicks) {
       return (
         <div className='loadbar'>

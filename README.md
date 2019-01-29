@@ -27,19 +27,15 @@ Live link: https://twitterflickrapi.herokuapp.com/
 
 * [React](https://reactjs.org/docs/getting-started.html) - The frontend framework used.
 * [Rails](https://guides.rubyonrails.org/) - The backend framework used.
-* [Twitter](https://rubygems.org/gems/twitter/versions/6.2.0) - Twitter gem to make API calls to the Twitter API.
 * [FlickRaw](https://rubygems.org/gems/flickraw/versions/0.9.9) - Ruby gem to make API calls to the Flickr API.
 * [Heroku](https://twitterflickrapi.herokuapp.com/) - Cloud platform that hosts the application.
 * [Postman](https://www.getpostman.com/) - Allowed me to test API calls before writing the code in Rails.
 * [Bootstrap](https://www.npmjs.com/package/react-bootstrap-table-next) - Styled the data in a table.
 
 ## My Thoughts
-1) This was my first experience with OAuth. Rather than write my own OAuth requests, I used Ruby gems recommended by both respective APIs.
-2) I used env variables in both development and production. This protects the API keys as I pushed the code to Github.
-3) The Twitter API was not developer friendly. They had broken links, and their instructions caused errors when I tested on Postman. In addition, I could only get results from OAuth 1.0 NOT OAuth 2.0.
-4) The twitter gem only allowed me to deliver results of the past 10 days NOT the past 30 days.
-5) In order to achieve the desired results, I would have had to make my OAuth 1.0 service (which is outdated).
-6) I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work. I am a full stack developer.
-7) I had fun doing this. There was a lot of console logging, and putting API responses. The various documentation was not always accurate (this caused headaches).
-8) I manually tested the results. The twitter API was not accurate. For example, this [tweet](https://twitter.com/TechnicallyDC/status/1088562537938014208) fails the media? boolean. It contains an image.
-I viewed all available methods to the API responses, and for whatever reason this tweet will not register as containing an image. I suspect more tweets slipped through the cracks.
+* This was my first experience with OAuth.
+* I used env variables in both development and production. This protects the API keys as I pushed the code to Github.
+* I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work.
+* I had fun doing this. There was a lot of console logging, and putting API responses.
+* One big lesson I learned was to cross reference Github documentation with documentation on the npm/gem etc. site.
+* sandbox max results 100
