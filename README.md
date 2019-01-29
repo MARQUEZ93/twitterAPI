@@ -18,14 +18,13 @@ Live: https://twitterflickrapi.herokuapp.com/
 
 ## Code Snippet
 
-* The TWTR class. This is where I made the Twitter API GET requests. The meat and bones of this project.
-* My comments explain what occurred with encoding.
-* In getTweets, I loop until there is no more 'next' keys in the responses.
+* The meat and bones of this project.
+* I loop until there is no more 'next' keys in the responses. Twitter explains their [pagination](https://developer.twitter.com/en/docs/tweets/search/api-reference/premium-search)
 * The BEARER variable is sent in the Authorization header to Twitter API.
 * I map and filter the tweet data that I want to send to the frontend.
 * I remove all duplicate tweets from the array as Twitter warns that this may occur.
 
-<p align="center"><img src="https://i.imgur.com/6ckdMcJ.png" width="800px" /></p>
+<p align="center"><img src="https://i.imgur.com/0WCryGO.png" width="800px" /></p>
 
 ## Built With
 
