@@ -12,10 +12,10 @@ Live link: https://twitterflickrapi.herokuapp.com/
 * ``` npm run webpack ```
 * ``` bundle install ```
 * ``` rails s ```
-* ``` command line curl -u 'api_key:api_secret_key' \
+* ``` command line curl -u 'key:secret_key' \
   --data 'grant_type=client_credentials' \
   'https://api.twitter.com/oauth2/token' ```
-* ```export BEARER= YOUR_BEARER_TOKEN_FROM_THE_CURL_COMMAND ```
+* ```export BEARER=YOUR_BEARER_TOKEN_FROM_THE_CURL_COMMAND ```
 * The project will available on http://localhost:3000/
 
 ## Code Snippet
