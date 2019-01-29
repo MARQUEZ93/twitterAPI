@@ -14,6 +14,7 @@ const columns = [
     text: "Site"
   },
   {
+    style: { width: '25%' },
     dataField: "text",
     text: "Text"
   },
