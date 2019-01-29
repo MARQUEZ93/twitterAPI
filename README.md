@@ -12,16 +12,20 @@ Live link: https://twitterflickrapi.herokuapp.com/
 * ``` npm run webpack ```
 * ``` bundle install ```
 * ``` rails s ```
+* command line curl -u 'api_key:api_secret_key' \
+  --data 'grant_type=client_credentials' \
+  'https://api.twitter.com/oauth2/token'
+* This will give you your Bearer token. You will then set this locally for 'BEARER' variable.
 * The project will available on http://localhost:3000/
 
 ## Code Snippet
-* This class makes an API call to the Flickr server.
-* The ENV variables are set for authorization.
-* The [FlickRaw](https://rubygems.org/gems/flickraw/versions/0.9.9) gem is implemented.
-* Search for flicks within the last month.
-* Parse response data in format desired by the frontend.
+* The meat and bones of this project.
+* I loop until there is no more 'next' keys in the responses.
+* The BEARER variable is sent in the Authorization header.
+* I package the tweet data that I want to send to the frontend.
+* I remove all duplicate tweets from the array as Twitter warns that this may occur.
 
-<p align="center"><img src="https://i.imgur.com/VapudwH.png" width="800px" /></p>
+<p align="center"><img src="https://i.imgur.com/LuVuM87.png" width="800px" /></p>
 
 ## Built With
 
@@ -31,11 +35,14 @@ Live link: https://twitterflickrapi.herokuapp.com/
 * [Heroku](https://twitterflickrapi.herokuapp.com/) - Cloud platform that hosts the application.
 * [Postman](https://www.getpostman.com/) - Allowed me to test API calls before writing the code in Rails.
 * [Bootstrap](https://www.npmjs.com/package/react-bootstrap-table-next) - Styled the data in a table.
+* [Twitter](https://developer.twitter.com/) - The Twitter API service
 
 ## My Thoughts
-* This was my first experience with OAuth.
+* This was fun. This was hard.
+* This was my first experience with OAuth. I received access to a bearer token with my api key & secret key.
+* I consoled.log'd & puts'd a lot. This allowed me to see what I was working with.
 * I used env variables in both development and production. This protects the API keys as I pushed the code to Github.
-* I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work.
-* I had fun doing this. There was a lot of console logging, and putting API responses.
-* One big lesson I learned was to cross reference Github documentation with documentation on the npm/gem etc. site.
-* sandbox max results 100
+* I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work as well.
+* I received access to my own sandbox api environment. I am using a free version that only has 250 calls a month.
+* An enterprise account would be mandatory for an enterprise project. I'll be honest and share that I created a fake twitter account to give myself 250 requests. I used all 250 requests.
+* One big lesson I learned was to cross reference Github documentation with documentation on the respective dependency site.

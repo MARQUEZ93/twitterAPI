@@ -94,9 +94,6 @@ sortRows(arr) {
     return renderArray;
   }
   render() {
-    if (this.state.tweets){
-      console.log(this.state);
-    }
     if (!this.state.tweets || !this.state.flicks) {
       return (
         <div className='loadbar'>
