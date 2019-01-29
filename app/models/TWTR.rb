@@ -33,6 +33,6 @@ class TWTR < ApplicationRecord
       frontend_array.concat(results)
       break if (!next_response || next_response.nil? || next_response == "" || next_response == "next") #end the loop if there is NO next attribute
     end
-  frontend_array #removes duplicates as the twitter documentation warns that duplicates occur
+  frontend_array.uniq! #removes duplicates as the twitter documentation warns that duplicates occur
 end
 end
