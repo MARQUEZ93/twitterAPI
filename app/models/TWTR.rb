@@ -21,15 +21,18 @@ class TWTR < ApplicationRecord
           })
       next_response = url_encode(JSON.parse(res)['next'])
 
-      break if (!next_response || next_response.nil? || next_response == "" || next_response == "next")
-      #^ I am running out of api calls, so I this will have to do as a conditional
       next_params = "&next=#{next_response}"
       results = JSON.parse(res)['results']
       results.map! do |tweet| #pass data how we want in frontend
-        {text: tweet["text"], name: tweet["user"]["screen_name"], count: tweet["retweet_count"]}
+        date = tweet['created_at'].to_s.split(' ')
+        date.delete_at(3)
+        date.delete_at(3)
+        date = date.join(' ')
+        {text: tweet["text"], name: tweet["user"]["screen_name"], count: tweet["retweet_count"], date: date}
       end
       frontend_array.concat(results)
+      break if (!next_response || next_response.nil? || next_response == "" || next_response == "next") #end the loop if there is NO next attribute
     end
-  frontend_array.uniq! #removes duplicates as the twitter documentation warns that duplicates occur
+  frontend_array #removes duplicates as the twitter documentation warns that duplicates occur
 end
 end

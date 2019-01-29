@@ -25,6 +25,10 @@ const columns = [
     dataField: "count",
     text: "Comments/Retweets"
   },
+  {
+    dataField: "date",
+    text: "Date"
+  }
 ];
 
 class App extends React.Component {
@@ -75,12 +79,12 @@ sortRows(arr) {
     let {tweets, flicks} = this.state;
     tweets = tweets.map(function(tweet) {
       return (
-          [tweet.count, {name: tweet.name, type: "Twitter", text: tweet.text, count: tweet.count, index: null}]
+          [tweet.count, {name: tweet.name, type: "Twitter", text: tweet.text, count: tweet.count, index: null, date: tweet.date}]
       );
     });
     flicks = flicks.map(function(flick) {
       return (
-          [flick.comments.length, {name: flick.name, type: "Flickr", text: flick.text, count: flick.comments.length, index: null}]
+          [flick.comments.length, {name: flick.name, type: "Flickr", text: flick.text, count: flick.comments.length, index: null, date: flick.date}]
       );
     });
     let rows = tweets.concat(flicks);
@@ -101,6 +105,7 @@ sortRows(arr) {
         </div>
       );
     }
+    console.log(this.state);
     return (
       <div className="appComponent">
         <Header />

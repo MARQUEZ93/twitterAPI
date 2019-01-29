@@ -26,7 +26,8 @@ class FLCKR < ApplicationRecord
       if (comments.inspect != "FlickRaw::ResponseList")
         comments = [] #send array of length zero to frontend if there are NO comments
       end
-      frontend_array.push ({text: photo.title, comments: comments, name: image.owner.username })
+      puts(image['taken'].to_s)
+      frontend_array.push ({text: photo.title, comments: comments, name: image.owner.username, date: Time.new(image['dates']['taken'].to_s).to_date.strftime('%a %d %b %Y')})
     end
     frontend_array
   end

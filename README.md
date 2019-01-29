@@ -39,6 +39,7 @@ Live: https://twitterflickrapi.herokuapp.com/
 ## My Thoughts
 * This was fun. This was hard.
 * This was my first experience with OAuth. I received access to a bearer token with my api key & secret key.
+* I did NOT include the images because the twitter api is broken in that regard. Many tweets, despite having an image, did NOT possess an entities.media.media_url attribute. 
 * I consoled.log'd & puts'd a lot. This allowed me to see what I was working with.
 * I used env variables in both development and production. This protects the API keys as I pushed the code to Github.
 * I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work as well.
