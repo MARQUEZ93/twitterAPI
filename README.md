@@ -2,7 +2,7 @@
 
 Use the Twitter and Flickr APIs to return all photos with a #dctech hashtag within the last month and rank them by the number of retweets for twitter and number of comments for flickr.
 
-Live link: https://twitterflickrapi.herokuapp.com/
+Live: https://twitterflickrapi.herokuapp.com/
 
 ## Getting Started
 
@@ -17,6 +17,7 @@ Live link: https://twitterflickrapi.herokuapp.com/
 * ``` curl localhost ```
 
 ## Code Snippet
+
 * The TWTR class. This is where I made the Twitter API GET requests. The meat and bones of this project.
 * My comments explain what occurred with encoding.
 * In getTweets, I loop until there is no more 'next' keys in the responses.
