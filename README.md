@@ -15,17 +15,18 @@ Live link: https://twitterflickrapi.herokuapp.com/
 * ``` command line curl -u 'api_key:api_secret_key' \
   --data 'grant_type=client_credentials' \
   'https://api.twitter.com/oauth2/token' ```
-* ```export BEARER= YOUR_BEARER_TOKEN_FROM_THE_CURL_COMMAND ``` 
+* ```export BEARER= YOUR_BEARER_TOKEN_FROM_THE_CURL_COMMAND ```
 * The project will available on http://localhost:3000/
 
 ## Code Snippet
-* The meat and bones of this project.
-* I loop until there is no more 'next' keys in the responses.
-* The BEARER variable is sent in the Authorization header.
-* I package the tweet data that I want to send to the frontend.
+* The TWTR class. This is where I made the Twitter API GET requests. The meat and bones of this project.
+* My comments explain what occurred with encoding.
+* In getTweets, I loop until there is no more 'next' keys in the responses.
+* The BEARER variable is sent in the Authorization header to Twitter API.
+* I map and filter the tweet data that I want to send to the frontend.
 * I remove all duplicate tweets from the array as Twitter warns that this may occur.
 
-<p align="center"><img src="https://i.imgur.com/LuVuM87.png" width="800px" /></p>
+<p align="center"><img src="https://i.imgur.com/6ckdMcJ.png" width="800px" /></p>
 
 ## Built With
 

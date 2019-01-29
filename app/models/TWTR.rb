@@ -1,12 +1,13 @@
 class TWTR < ApplicationRecord
 
-  def self.url_encode(s) #encode function I found online to properly encode the reponse['next'] for the subsequent GET request
+  def self.url_encode(s) #encode function I found online to properly encode the response['next'] for the subsequent GET request
      s.to_s.dup.force_encoding("ASCII-8BIT").gsub(/[^a-zA-Z0-9_\-.]/) {
        sprintf("%%%02X", $&.unpack("C")[0])
      }
      #this was one of the more annoying parts of the project
-     #twitter this encoding, and there are many recommendations on stack overflow etc. on how to encode w/ ruby,
+     #twitter requires encoding the next param, and there are many recommendations on stack overflow etc. on how to encode w/ ruby,
      #and many of these recommendations did NOT work
+     #I tested in the console by using a working encode calculator online and copying/pasting results with various ruby functions that encode
   end
 
   def self.getTweets
