@@ -24,7 +24,7 @@ Live: https://twitterflickrapi.herokuapp.com/
 * I map and filter the tweet data that I want to send to the frontend.
 * I remove all duplicate tweets from the array as Twitter warns that this may occur.
 
-<p align="center"><img src="https://i.imgur.com/0WCryGO.png" width="800px" /></p>
+<p align="center"><img src="https://i.imgur.com/tPhAEYw.png" width="800px" /></p>
 
 ## Built With
 
