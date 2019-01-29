@@ -1,6 +1,6 @@
 class TWTR < ApplicationRecord
 
-  def url_encode(s) #encode function I found online to properly encode the reponse['next'] for the subsequent GET request
+  def self.url_encode(s) #encode function I found online to properly encode the reponse['next'] for the subsequent GET request
      s.to_s.dup.force_encoding("ASCII-8BIT").gsub(/[^a-zA-Z0-9_\-.]/) {
        sprintf("%%%02X", $&.unpack("C")[0])
      }
@@ -24,7 +24,7 @@ class TWTR < ApplicationRecord
 
       break if (!next_response || next_response.nil? || next_response == "" || next_response == "next")
       #^ I am running out of api calls, so I this will have to do as a conditional
-      
+
       next_params = "&next=#{next_response}"
       results = JSON.parse(res)['results']
       results.map! do |tweet| #pass data how we want in frontend
