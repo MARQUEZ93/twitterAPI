@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resource :tweets, only: [:show]
-    resource :flicks, only: [:show]
   end
   root "static_pages#root"
 end

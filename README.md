@@ -1,13 +1,14 @@
-# [twitterFlickrAPI](https://twitterflickrapi.herokuapp.com/)
+# [twitterAPI](https://twitterapi.herokuapp.com/)
 
-Use the Twitter and Flickr APIs to return all photos with a #dctech hashtag within the last month and rank them by the number of retweets for twitter and number of comments for flickr.
+Use Twitter's premium API service to return all tweets with a #dctech hashtag within the last 30 days. They are ranked by the number of retweets.
+I am using a free sandbox account, so I have only have access to 250 requests a month.
 
-Live: https://twitterflickrapi.herokuapp.com/
+Live: https://twitterapi.herokuapp.com/
 
 ## Getting Started
 
-* ``` git clone https://github.com/MARQUEZ93/twitterFlickrAPI.git ```
-* ``` cd twitterFlickrAPI ```
+* ``` git clone https://github.com/MARQUEZ93/twitterAPI.git ```
+* ``` cd twitterAPI ```
 * ``` npm install ```
 * ``` npm run webpack ```
 * ``` bundle install ```
@@ -30,8 +31,7 @@ Live: https://twitterflickrapi.herokuapp.com/
 
 * [React](https://reactjs.org/docs/getting-started.html) - The frontend framework used.
 * [Rails](https://guides.rubyonrails.org/) - The backend framework used.
-* [FlickRaw](https://rubygems.org/gems/flickraw/versions/0.9.9) - Ruby gem to make API calls to the Flickr API.
-* [Heroku](https://twitterflickrapi.herokuapp.com/) - Cloud platform that hosts the application.
+* [Heroku](https://www.heroku.com/) - Cloud platform that hosts the application.
 * [Postman](https://www.getpostman.com/) - Allowed me to test API calls before writing the code in Rails.
 * [Bootstrap](https://www.npmjs.com/package/react-bootstrap-table-next) - Styled the data in a table.
 * [Twitter](https://developer.twitter.com/) - The Twitter API service
@@ -39,10 +39,7 @@ Live: https://twitterflickrapi.herokuapp.com/
 ## My Thoughts
 * This was fun. This was hard.
 * This was my first experience with OAuth. I received access to a bearer token with my api key & secret key.
-* I did NOT include the images because the twitter api is broken in that regard. Many tweets, despite having an image, did NOT possess an entities.media.media_url attribute.
-* I consoled.log'd & puts'd a lot. This allowed me to see what I was working with.
-* I used env variables in both development and production. This protects the API keys as I pushed the code to Github.
-* I published on Heroku because it was easy & free to do so. Makes it easier for you guys to see my work as well.
+* I used env variables in both development and production. This protects the API keys from the client & Github.
 * I received access to my own sandbox api environment. I am using a free version that only has 250 calls a month.
-* An enterprise account would be mandatory for an enterprise project. I'm not embarrassed to share that I created a fake twitter account to give myself 250 requests. I used all 250 requests.
+* I'm not embarrassed to share that I created a fake twitter account to give myself 250 requests. I used all 250 requests. Lots of console logging & puts'ing.
 * One big lesson I learned was to cross reference Github documentation with documentation on the respective dependency site.

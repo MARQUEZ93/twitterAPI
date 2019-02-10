@@ -10,10 +10,6 @@ const columns = [
     text: "Ranking"
   },
   {
-    dataField: "type",
-    text: "Site"
-  },
-  {
     style: { width: '25%' },
     dataField: "text",
     text: "Text"
@@ -35,17 +31,13 @@ const columns = [
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {tweets: null, flicks: null};
+    this.state = { tweets: null };
   }
   componentDidMount() {
     ($.ajax({
       url:'/api/tweets',
       method: 'GET'
     }).then(res=>this.setState({tweets:res})));
-    ($.ajax({
-      url:'/api/flicks',
-      method: 'GET'
-    }).then(res=>this.setState({flicks:res})));
   }
   merge(leftArr, rightArr) {
     var sortedArr = [];
@@ -77,36 +69,34 @@ sortRows(arr) {
 }
   renderTable(){
     let renderArray = [];
-    let {tweets, flicks} = this.state;
+    let {tweets} = this.state;
     tweets = tweets.map(function(tweet) {
       return (
-          [tweet.count, {name: tweet.name, type: "Twitter", text: tweet.text, count: tweet.count, index: null, date: tweet.date}]
+          [tweet.count, {name: tweet.name, text: tweet.text, count: tweet.count, index: null, date: tweet.date}]
       );
     });
-    flicks = flicks.map(function(flick) {
-      return (
-          [flick.comments.length, {name: flick.name, type: "Flickr", text: flick.text, count: flick.comments.length, index: null, date: flick.date}]
-      );
-    });
-    let rows = tweets.concat(flicks);
-    rows = this.sortRows(rows);
-    rows.forEach(function(row, index){
+    tweets = this.sortRows(tweets);
+    tweets.forEach(function(row, index){
       //data is sorted on index 0, so only render the data we want in index 1
-      //[ [retweets, {tweet object}], [comments, {flickr object}] ] array of arrays
+      //[ [retweets, {tweet object}] ] array of arrays
       row[1].index = index+1;
       renderArray.push(row[1]);
     });
     return renderArray;
   }
   render() {
-    if (!this.state.tweets || !this.state.flicks) {
+    if (!this.state.tweets) {
       return (
-        <div className='loadbar'>
-          <GridLoader color="#6495ED" size="50px" margin="4px"/>
-        </div>
+        <div className='requestWarning'>
+          <p className="requestWarningParagraph">
+            My free sandbox account only has 250 requests a month.
+          </p>
+          <div className='loadbar'>
+            <GridLoader color="#6495ED" size="50px" margin="4px"/>
+          </div>
+      </div>
       );
     }
-    console.log(this.state);
     return (
       <div className="appComponent">
         <Header />

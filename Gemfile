@@ -55,8 +55,7 @@ gem 'listen', '>= 3.0.5', '< 3.2'
 end
 #make api calls
 gem 'jquery-rails'
-gem 'twitter' #i can't remove this because rails is getting confused w/ my TWTR class. its a long story 
-gem 'flickraw'
+gem 'twitter' #i can't remove this because rails is getting confused w/ my TWTR class. its a long story
 gem 'pg'
 gem 'rest-client'
 

@@ -44,6 +44,19 @@
   }
 }
 
+.requestWarning{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.requestWarningParagraph{
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  color: red;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
 .loadbar {
   display: flex;
   justify-content: center;
